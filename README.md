@@ -71,3 +71,7 @@ Umidly's design is guided by principles that prioritize user experience and visu
 *   **Flexible Layouts:** Extensive use of `flexbox` for efficient and adaptable content arrangement.
 
 This guide is a living document and will evolve as Umidly grows. For any questions or suggestions, please contact [relevant team/person].
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
