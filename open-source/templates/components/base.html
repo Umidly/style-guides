@@ -1,0 +1,60 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% trans "Umidly" %}{% endblock %}</title>
+    <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'components/base.css' %}">
+    <link rel="stylesheet" href="{% static 'components/buttons.css' %}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <div class="scroll-indicator" id="scrollIndicator"></div>
+    
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <img src="{% static "images/logo.png" %}" alt="Umidly Logo" class="logo-img">
+                <span class="logo-text">Umidly</span>
+            </a>
+            <div class="menu-toggle" id="mobile-menu">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about">{% trans "About" %}</a></li>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/umidly_com/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://t.me/umidly_com" target="_blank" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="https://github.com/Umidly" target="_blank" aria-label="Github"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <a href="https://play.google.com/store/games?hl=ru" target="_blank" class="cta-outline">{% trans "Get the App" %}</a>
+            </ul>
+        </div>
+    </nav>
+    
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <a href="/" class="logo">
+                <span class="logo-text">Umidly</span>
+            </a>
+            <div class="footer-links">
+                <a href="{% url 'legal' %}">{% trans "Privacy & Terms" %}</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'components/base.js' %}"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

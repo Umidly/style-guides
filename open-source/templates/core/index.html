@@ -1,0 +1,81 @@
+{% extends 'components/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans "Umidly - AI-powered Uni Prep Assistant" %}{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'core/index.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="hero-section">
+    <div class="hero-content">
+        <h1 class="hero-title">
+            {% trans "Prepare for" %} <span class="highlight">{% trans "Anything" %}</span><br>
+        </h1>
+        <p class="hero-subtitle">
+            {% blocktrans %}Prepare for your dream university and major with Umidly — powered by the latest GPT-5.{% endblocktrans %}
+        </p>
+    </div>
+    
+    <div class="cta-container">
+        <a href="{% url 'accounts:sign-in' %}" class="cta-primary">
+            {% trans "Try Umidly" %}
+        </a>
+    </div>
+</div>
+
+<div class="features-container" id="features">
+    <h1 class="feature-title">{% trans "Maximize your prep with new features" %}</h1>
+    <div class="features features-reversed">
+        <div class="features-text">
+            <div class="feature-icon">
+                <svg width="64" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2 L15.09 8.26 L22 9.27 L17 14.14 L18.18 21.02 L12 17.77 L5.82 21.02 L7 14.14 L2 9.27 L8.91 8.26 L12 2 Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <h2 class="section-title">{% trans "Personalization" %}</h2>  
+            <p class="section-subtitle">{% trans "Let AI design the path that fits you best, with custom study plans, lessons, and resources." %}</p>
+        </div>
+        <div class="image-placeholder">
+            <img src="{% static 'images/customization.jpg' %}" alt="Product Screenshot">
+        </div>
+    </div>
+    <div class="features">
+        <div class="features-text">
+            <div class="feature-icon">
+                <svg width="64" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z" fill="currentColor"/>
+                </svg>
+            </div>
+            <h2 class="section-title">{% trans "Cross-Device Sync" %}</h2>
+            <p class="section-subtitle">{% trans "Your progress is automatically saved and synced across all your devices. Switch seamlessly from your laptop to your tablet or phone and pick up right where you left off, ensuring your learning journey is always flexible and uninterrupted." %}</p>
+        </div>
+        <div class="image-placeholder">
+            <img src="{% static 'images/sync.jpg' %}" alt="Product Screenshot">
+        </div>
+    </div>
+</div>
+
+<div class="stats-section">
+    <div class="stats-grid">
+        <div class="stat-item">
+            <span class="stat-number">100+</span>
+            <span class="stat-label">{% trans "Active Learners" %}</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">500+</span>
+            <span class="stat-label">{% trans "Lessons Completed" %}</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">95%</span>
+            <span class="stat-label">{% trans "Success Rate" %}</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">4.8★</span>
+            <span class="stat-label">{% trans "User Rating" %}</span>
+        </div>
+    </div>
+</div>
+{% endblock %}
