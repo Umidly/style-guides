@@ -2,8 +2,6 @@
 
 This repository contains the official style guides for Umidly, ensuring consistency across all our products, communications, and codebases. Adhering to these guidelines helps us maintain a unified brand identity and deliver a cohesive user experience.
 
-## Branding Guidelines
-
 ### Logo Usage
 
 [Provide guidelines on how to use the Umidly logo, including minimum size, clear space, and variations (e.g., primary, secondary, icon). Include examples of correct and incorrect usage. The logo image height is typically 40px (desktop) and 30px (mobile).]
@@ -47,8 +45,6 @@ Umidly primarily uses the 'Poppins' font for all text elements, ensuring a clean
     *   Label: `0.9rem`, `font-weight: 500`
 
 ## Voice & Tone
-
-[Describe the personality and emotional quality of Umidly's communication. Are we friendly, professional, innovative, playful? Provide examples of how this tone should be applied in different scenarios (e.g., marketing, customer support, product UI).]
 
 *   **Overall Tone:** [e.g., Friendly, Professional, Empowering, Innovative]
 *   **Key Characteristics:** [e.g., Clear, Concise, Empathetic, Optimistic]
